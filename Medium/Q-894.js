@@ -15,10 +15,7 @@ var allPossibleFBT = function (N) {
     let memo = new Map();
     const getAllTrees = function (nodes) {
         if (nodes === 1) {
-            let node = new TreeNode(0);
-            node.left = null;
-            node.right = null;
-            return [node];
+            return [new TreeNode(0)];
         }
         if (memo.has(nodes)) {
             return memo.get(nodes);
